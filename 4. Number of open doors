@@ -1,0 +1,7 @@
+import math
+def ans(a):
+    return int(math.sqrt(a))
+a=int(input())
+for i in range(a):
+    b=int(input())
+    print(ans(b))
