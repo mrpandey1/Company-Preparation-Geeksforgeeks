@@ -1,0 +1,15 @@
+    def insert_beg(self,data):
+        new_head=Node(data)
+        new_head.next=self.head
+        self.head=new_head
+        
+    def insert_end(self,data):
+        temp=self.head
+        new_data=Node(data)
+        if self.head is None:
+            self.head=new_data
+            return
+        last=self.head
+        while last.next:
+            last=last.next
+        last.next=new_data
