@@ -1,0 +1,31 @@
+def ans(n,max,h,tw,f,th):
+    co=0
+    for i in range(h):
+        sum=i*100
+        if sum==max and i<=n and i>co:
+            co=i
+        if sum<max:
+            for j in range(tw+1):
+                sum1=sum+j*200
+                if sum1==max and (i+j)<=n and(j+i)>co:
+                    co=j+i
+                if sum1<max:
+                    for k in range(f+1):
+                        sum2=sum1+k*500
+                        if sum2==max and (i+j+k)<=n and (i+j+k)>co:
+                            co=i+j+k
+                        if sum2<max:
+                            for l in range(th+1):
+                                sum3=sum2+l*1000
+                                if sum3==max and (i+j+k+l)<=n and (i+j+k+l)>co:
+                                    co=i+j+k+l
+                                if sum3>max:
+                                    l=th+1
+    return co
+n=int(input())   
+max=int(input())   
+h=int(input())   
+tw=int(input())   
+f=int(input())   
+th=int(input())
+print(ans(n,max,h,tw,f,t
