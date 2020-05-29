@@ -1,0 +1,12 @@
+def fib(n):
+    a=1
+    b=0
+    for i in range(n):
+        print(a,end=' ')
+        a+=b
+        b=a-b
+    print()
+a=int(input())
+for i in range(a):
+    b=int(input())
+    fib(b)
