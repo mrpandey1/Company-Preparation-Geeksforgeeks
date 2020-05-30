@@ -1,2 +1,2 @@
-# TCS_geekforgeeks_python
-## Solutions of various problems asked in tcs interviews.
+# campany-preparation_geekforgeeks_python
+## Solutions of various problems asked in interviews.
