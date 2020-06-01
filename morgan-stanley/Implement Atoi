@@ -1,0 +1,19 @@
+# your task is to complete this function
+# function should return an integer
+import re
+def atoi(strs):
+        strs = strs.strip()
+        temp=True
+        for i in strs:
+            if i.isdigit() or i=='-' or i=='+':
+                temp=True
+            else:
+                temp=False
+        if temp==False:
+            return -1
+        strs = re.findall('(^[\+\-0]*\d+)\D*', strs)
+        try:
+            ans= int(''.join(strs))
+            return ans
+        except:
+            return -1
