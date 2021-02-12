@@ -1,0 +1,3 @@
+def swapNibble(a):
+  print((a&0x0f)<<4|(a&0xf0)>>4)
+swapNibble(100)
