@@ -1,0 +1,3 @@
+class Solution:
+    def convertEvenBitToZero (ob, n):
+        return (n & 0xaaaaaaaaaa)
