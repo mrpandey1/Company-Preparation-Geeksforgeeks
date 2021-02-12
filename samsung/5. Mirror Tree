@@ -1,0 +1,6 @@
+def mirror(root):
+    if not root:
+        return
+    mirror(root.left)
+    mirror(root.right)
+    root.left,root.right=root.right,root.left
