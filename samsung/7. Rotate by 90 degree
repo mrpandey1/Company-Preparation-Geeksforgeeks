@@ -1,0 +1,14 @@
+#User function Template for python3
+
+def reverse(a,n):
+    for i in range(n):
+        for j in range(n//2):
+          a[i][j],a[i][-j-1]=a[i][-j-1],a[i][j]
+def transform(a,n):
+  for i in range(n):
+    for j in range(i,n):
+      a[i][j],a[j][i]=a[j][i],a[i][j]
+def rotateby90(a, n):
+    reverse(a,n)
+    transform(a,n)
+    return a
