@@ -1,0 +1,19 @@
+def KDistance(root,k):
+    curr_level=0
+    if k==0:
+        return [root.data]
+    curr=[root] if root else None
+    level=[]
+    while curr:
+        if curr_level==k:
+            level=[node.data for node in curr]
+        next_=[]
+        for node in curr:
+            if node.left:
+                next_.append(node.left)
+            if node.right:
+                next_.append(node.right)
+        curr=next_
+        curr_level+=1
+    return level
+            
