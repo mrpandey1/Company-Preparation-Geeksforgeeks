@@ -1,0 +1,7 @@
+def maxSubArraySum(a,size):
+      ans=a[0]
+      curr=a[0]
+      for i in a[1:]:
+        curr=max(i,curr+i)
+        ans=max(ans,curr)
+      return ans
